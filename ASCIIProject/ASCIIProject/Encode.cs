@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace ASCIIProject
 {
-    public class Encode
+    public class Encoder
     {
         private string total = string.Empty;
         private string totalB = string.Empty;
         private string totalC = string.Empty;
         private int inputInt = 0;
         private char inputChar = ' ';
-        public void Encoder(string input)
+        public void Encode(string input)
         {
             int length = input.Length;
             while (input.ToLower() != "finish")
             {
-                bool parser = char.TryParse(input, out this.inputChar);
+                bool isParsable = char.TryParse(input, out this.inputChar);
                 while (length != 1)
                 {
                     Console.Write("can not be longer nor shorter than 1 (\"finish\" to finish): ");
                     input = Console.ReadLine();
                     length = input.Length;
                 }
-                while (!parser)
+                while (!isParsable)
                 {
                     Console.Write("Not a character, try again (\"finish\" to finish): ");
                     input = Console.ReadLine();
                     length = input.Length;
-                    parser = char.TryParse(input, out this.inputChar);
+                    isParsable = char.TryParse(input, out this.inputChar);
                 }
                 this.inputInt = (int)inputChar;
                 this.total = this.total + this.inputInt;
