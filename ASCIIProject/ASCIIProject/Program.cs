@@ -12,7 +12,7 @@ namespace test
         {
             Encode encode = new Encode();
             Decode decode = new Decode();
-            string input = "";
+            string input = string.Empty;
             int length = input.Length;
             char convertType;
             Console.Write("Do you want to Encode (E) or Decode (D)? ");

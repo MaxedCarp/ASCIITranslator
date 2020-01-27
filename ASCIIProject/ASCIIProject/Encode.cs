@@ -8,9 +8,9 @@ namespace ASCIIProject
 {
     public class Encode
     {
-        private string total = "";
-        private string totalB = "";
-        private string totalC = "";
+        private string total = string.Empty;
+        private string totalB = string.Empty;
+        private string totalC = string.Empty;
         private int inputInt = 0;
         private char inputChar = ' ';
         public void Encoder(string input)
