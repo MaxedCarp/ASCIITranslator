@@ -19,46 +19,48 @@ namespace ASCIIProject
             while (input.ToLower() != "finish")
             {
                 bool isParsable = int.TryParse(input, out this.inputInt);
-                while (length < 1)
-                {
-                    Console.Write("can not be shorter than 1 (\"finish\" to finish): ");
-                    input = Console.ReadLine();
-                    length = input.Length;
-                }
-                while (!isParsable)
+                while (!isParsable && input.ToLower() != "finish")
                 {
                     Console.Write("Not an integer, try again (\"finish\" to finish): ");
                     input = Console.ReadLine();
                     length = input.Length;
                     isParsable = int.TryParse(input, out this.inputInt);
                 }
+                while (length < 1 && input.ToLower() != "finish")
+                {
+                    Console.Write("Can not be shorter than 1 digit (\"finish\" to finish): ");
+                    input = Console.ReadLine();
+                    length = input.Length;
+                }
+                while (length > 3 && input.ToLower() != "finish")
+                {
+                    Console.Write("Can not be longer than 3 digits (\"finish\" to finish): ");
+                    input = Console.ReadLine();
+                    length = input.Length;
+                }
                 this.inputChar = (char)inputInt;
-                this.total += this.inputInt;
-                if (this.inputInt == 32)
+                if (this.inputInt == ' ')
                 {
                     Console.WriteLine("Space" + " (" + this.inputInt + "))");
                     this.totalC += this.inputChar + " ";
                     this.totalB += this.inputChar;
+                    this.total += this.inputInt;
                 }
-                else if (this.inputInt > 64 && this.inputInt < 91)
+                else if (this.inputInt >= 'A' && this.inputInt <= 'Z')
                 {
                     Console.WriteLine(this.inputChar + " (" + this.inputInt + ") / {0} ({1})", (char)(this.inputInt + 32), this.inputInt + 32);
                     this.totalC += this.inputChar + " ";
                     this.totalB += this.inputChar;
+                    this.total += this.inputInt;
                 }
-                else if (this.inputInt > 96 && this.inputInt < 123)
+                else if (this.inputInt >= 'a' && this.inputInt <= 'z')
                 {
                     Console.WriteLine(this.inputChar + " (" + this.inputInt + ") / {0} ({1})", (char)(this.inputInt - 32), this.inputInt - 32);
                     this.totalC += this.inputChar + " ";
                     this.totalB += this.inputChar;
+                    this.total += this.inputInt;
                 }
-                else if (this.inputInt < 65 && this.inputInt != 32)
-                {
-                    Console.WriteLine(this.inputChar + " (" + this.inputInt + "))");
-                    this.totalC += this.inputChar + " ";
-                    this.totalB += this.inputChar;
-                }
-                else if (this.inputInt > 127 || this.inputInt < 0)
+                else if (this.inputInt > '~' || this.inputInt < ' ')
                 {
                     Console.WriteLine("INVALID PLEASE TRY AGAIN");
                 }
@@ -67,6 +69,7 @@ namespace ASCIIProject
                     Console.WriteLine(this.inputChar + " (" + this.inputInt + "))");
                     this.totalC += this.inputChar + " ";
                     this.totalB += this.inputChar;
+                    this.total += this.inputInt;
                 }
                 Console.Write("Please enter the requested numbers to decode (\"finish\" to finish): ");
                 input = Console.ReadLine();
@@ -78,6 +81,14 @@ namespace ASCIIProject
             Console.WriteLine("\nDigits: {0}", this.totalB);
             Console.WriteLine("String: {0}", this.total);
             Console.WriteLine("Separated Digits: {0}", totalC);
+        }
+        public override string ToString()
+        {
+            string output = string.Empty;
+            output += string.Format("Characters: {0}\n", this.totalB);
+            output += string.Format("String: {0}\n", this.total);
+            output += string.Format("Separated Characters: {0}", totalC);
+            return output;
         }
     }
 }

@@ -39,3 +39,16 @@ J:\C#\Projects\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.exe.manifest
 J:\C#\Projects\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.application
 J:\C#\Projects\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.exe
 J:\C#\Projects\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.pdb
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\bin\Debug\ASCIIProject.exe.config
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\bin\Debug\ASCIIProject.exe.manifest
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\bin\Debug\ASCIIProject.application
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\bin\Debug\ASCIIProject.exe
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\bin\Debug\ASCIIProject.pdb
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.csprojAssemblyReference.cache
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.Properties.Resources.resources
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.csproj.GenerateResource.cache
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.TrustInfo.xml
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.exe.manifest
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.application
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.exe
+H:\ASCIITranslator\ASCIITranslator\ASCIIProject\ASCIIProject\obj\Debug\ASCIIProject.pdb

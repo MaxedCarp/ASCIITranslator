@@ -10,8 +10,8 @@ namespace test
         [STAThread]
         static void Main(string[] args)
         {
-            Encoder encode = new Encoder();
-            Decoder decode = new Decoder();
+            Encoder encoder = new Encoder();
+            Decoder decoder = new Decoder();
             string input = string.Empty;
             int length = input.Length;
             char convertType;
@@ -26,22 +26,22 @@ namespace test
             {
                 Console.Write("Please enter a character to encode (\"finish\" to finish): ");
                 input = Console.ReadLine();
-                encode.Encode(input);
+                encoder.Encode(input);
             }
             else if (convertType == 'd' || convertType == 'D') //d || D
             {
                 Console.Write("Please enter the requested numbers to decode (\"finish\" to finish): ");
                 input = Console.ReadLine();
-                decode.Decode(input);
+                decoder.Decode(input);
             }
 
             if (convertType == 'e' || convertType == 'E')
             {
-                encode.Get();
+                Console.WriteLine(encoder);
             }
-            if (convertType == 'd' || convertType == 'E')
+            if (convertType == 'd' || convertType == 'D')
             {
-                decode.Get();
+                Console.WriteLine(decoder);
             }
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
